@@ -7,9 +7,11 @@
 
 PS1='[\u@\h \W]\$ '
 
-
-if [ `uname -n` == "archinvis" ]; then
-    ssh-add;
+if [ `uname -n` == "archinvis" ] && [ ! -e .starting_ssh_tvc ]
+then
+    touch .starting_ssh_tvc
+    exec ssh-agent /bin/bash
 fi
 
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
+
