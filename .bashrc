@@ -7,9 +7,11 @@
 
 PS1='[\u@\h \W]\$ '
 
-if [ `uname -n` == "archinvis" ] && [ ! -e .starting_ssh_tvc ]
+# if on the machine archinvis, restart bash using ssh-agent
+if [ `uname -n` == "archinvis" ] && [ ! $starting_ssh_tvc ]
 then
-    touch .starting_ssh_tvc
+    starting_ssh_tvc="yes"
+    export starting_ssh_tvc
     exec ssh-agent /bin/bash
 fi
 
