@@ -5,7 +5,13 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
+#PS1='[\u@\h \W]\$ '
+#PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+PROMPT_COMMAND='PS1="\[\033[0;33m\][\!]'\
+'[\`if [[ \$? = "0" ]]; then echo "\\[\\033[32m\\]"; else echo "\\[\\033[31m\\]"; fi\`'\
+'\u@\h: \[\033[34;1m\]'\
+'\`if [[ `pwd|wc -c|tr -d " "` > 18 ]]; then echo "\\W"; else echo "\\w"; fi\`'\
+'\[\e[0;33m\]]\$\[\033[0m\] "; echo -ne "\033]0;`hostname -s`:`pwd`\007"'
 
 # if on the machine archinvis, restart bash using ssh-agent
 if [ `uname -n` == "archinvis" ]; then

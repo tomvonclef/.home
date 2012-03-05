@@ -123,8 +123,6 @@ map [24~ :ex:$
 map OD 
 map Ot 
 map ; :
-map W  :wq 
-map Q  :q 
 "-------------------------------------------
 
 set mouse=a
