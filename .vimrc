@@ -39,6 +39,10 @@ set background=dark
 " uncomment to insert spaces instead of a tab when tab is pressed
 set expandtab
 
+" turn expandtab off for makefiles
+autocmd FileType make set noexpandtab
+
+
 " uncomment to use a different color map
 ":hi Comment   term=bold cterm=NONE ctermfg=Blue ctermbg=NONE gui=NONE guifg=Blue guibg=NONE
 ":hi Constant  term=underline cterm=NONE ctermfg=Red ctermbg=NONE gui=NONE guifg=Magenta guibg=NONE
@@ -63,28 +67,28 @@ set ignorecase
 set report=0
 
 " map! is for maping of keys in insert mode
-" map is for maping of keys in command mode 
+" map is for maping of keys in command mode
 "####################################################
-"sun 4 keypad stuff 
-"for instert mode 
+"sun 4 keypad stuff
+"for instert mode
 map! Ok +
 map! Om -
 map! OM 
 map! [2~   0
-"for command mode 
+"for command mode
 map [2~ i
 map OM 
 map Ok +
 map Om -
 
 "#####################################################
-"other sun4 keyboard stuff 
+"other sun4 keyboard stuff
 " map F1   indent 2 spaces
 map [11~ I  
 "map F2   indent 2 spaces  go down to next line
 map [12~ I   OB
 "UNDO to  u
-map [26~ u 
+map [26~ u
 " OPEN to o
 map [31~ o
 " map FIND to /
@@ -95,11 +99,11 @@ map [32~ p
 map [24~ .
 
 "#####################################################
-" the following are the vt102 number pad keys 
+" the following are the vt102 number pad keys
 " map 8 to UP-arrow ,4 to LEFT-arrow, 6 to RIGHT-arrow,2 to DOWN-arrow
 " map 1 to down-left   3 to down-right 9 to up-right 7 to up-left
 "#keypad  6
-map! Ov  
+map! Ov 
 map Ov l
 "#keypad  4
 map! Ot 
@@ -114,7 +118,7 @@ map Ow kh
 map Os jl
 map Oq hj
 map Oy lk
-"map 5 to goto first line 
+"map 5 to goto first line
 map Ou :1 
 "map 0 to goto last line
 map Op :$ 
@@ -126,3 +130,10 @@ map ; :
 "-------------------------------------------
 
 set mouse=a
+
+set wildmenu
+
+"autoremove trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+
+imap jk <Esc>
