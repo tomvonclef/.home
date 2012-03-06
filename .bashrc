@@ -11,7 +11,7 @@ PROMPT_COMMAND='PS1="\[\033[0;33m\][\!]'\
 '[\`if [[ \$? = "0" ]]; then echo "\\[\\033[32m\\]"; else echo "\\[\\033[31m\\]"; fi\`'\
 '\u@\h: \[\033[34;1m\]'\
 '\`if [[ `pwd|wc -c|tr -d " "` > 35 ]]; then echo "\\W"; else echo "\\w"; fi\`'\
-'\[\e[0;33m\]]\$\[\033[0m\] "; echo -ne "\033]0;`hostname -s`:`pwd`\007"'
+'\[\e[0;33m\]]\$\[\033[0m\] "'
 
 # if on the machine archinvis, restart bash using ssh-agent
 if [ `uname -n` == "archinvis" ]; then
