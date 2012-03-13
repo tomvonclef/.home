@@ -32,3 +32,7 @@ fi
 
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
+if [ $(hostname | cut -c 1-5) == "hydra" ]; then
+    export PYTHONPATH=$PYTHONPATH:/home/tvonclef/lib/python:/home/tvonclef/bin/setuptools
+    export PATH=$PATH:/home/tvonclef/bin/setuptools
+fi
