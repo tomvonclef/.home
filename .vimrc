@@ -133,7 +133,7 @@ set mouse=a
 
 set wildmenu
 
-"autoremove trailing whitespace on save
-autocmd BufWritePre * :%s/\s\+$//e
+""autoremove trailing whitespace on save
+"autocmd BufWritePre * :%s/\s\+$//e
 
 imap jk <Esc>
