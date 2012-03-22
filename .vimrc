@@ -42,7 +42,6 @@ set expandtab
 " turn expandtab off for makefiles
 autocmd FileType make set noexpandtab
 
-
 " uncomment to use a different color map
 ":hi Comment   term=bold cterm=NONE ctermfg=Blue ctermbg=NONE gui=NONE guifg=Blue guibg=NONE
 ":hi Constant  term=underline cterm=NONE ctermfg=Red ctermbg=NONE gui=NONE guifg=Magenta guibg=NONE
@@ -54,6 +53,9 @@ autocmd FileType make set noexpandtab
 ":hi Underlined   term=underline cterm=underline ctermfg=Magenta gui=underline guifg=SlateBlue
 ":hi Ignore term=NONE cterm=NONE ctermfg=white ctermbg=NONE gui=NONE guifg=bg guibg=NONE
 
+"command-line completion operates in an enhanced mode.
+set wildmenu
+
 "Tell you if you are in insert mode
 set showmode
 
@@ -64,7 +66,7 @@ set showmatch
 set ignorecase
 
 "tell you how many lines have been changed
-set report=0
+"set report=0
 
 " map! is for maping of keys in insert mode
 " map is for maping of keys in command mode
@@ -131,9 +133,15 @@ map ; :
 
 set mouse=a
 
-set wildmenu
-
-""autoremove trailing whitespace on save
+" auto remove trailing whitespace on save
 "autocmd BufWritePre * :%s/\s\+$//e
 
+set hlsearch
+
 imap jk <Esc>
+
+"Show tabs and trailing whitespace
+set list listchars=tab:#=,trail:·
+highlight ExtraWhitespace ctermfg=8 guifg=gray34
+match ExtraWhitespace /\s\+$\|\t/
+
