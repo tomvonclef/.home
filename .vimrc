@@ -145,3 +145,5 @@ set list listchars=tab:#=,trail:·
 highlight ExtraWhitespace ctermfg=8 guifg=gray34
 match ExtraWhitespace /\s\+$\|\t/
 
+"Delete trailing spaces upon leaving insert mode
+autocmd InsertLeave * s/\s\+$//e
