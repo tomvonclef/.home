@@ -1,4 +1,4 @@
-These are the config files I use on all my *nixes.
+These are the dot files I use on all my *nixes.
 
-I synchronize them using git, so I have the same bash and vim settings
+I synchronize them using git, so I have the same bash, vim, etc. settings
 on multiple machines.
