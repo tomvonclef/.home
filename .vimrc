@@ -147,3 +147,9 @@ match ExtraWhitespace /\s\+$\|\t/
 
 "Delete trailing spaces upon leaving insert mode
 autocmd InsertLeave * s/\s\+$//e
+
+function! TrimSpaces() range
+  let oldhlsearch=&hlsearch
+  :%s/\s\+$//e
+  let &hlsearch=oldhlsearch
+endfunction
