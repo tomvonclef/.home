@@ -129,27 +129,43 @@ map [24~ :ex:$
 map OD 
 map Ot 
 map ; :
-"-------------------------------------------
 
-set mouse=a
+"#####################################################
+" the following are for dealing with whitespace
+" tabs and trailing spaces
 
-" auto remove trailing whitespace on save
+"auto remove trailing whitespace on save
 "autocmd BufWritePre * :%s/\s\+$//e
 
-set hlsearch
-
-imap jk <Esc>
+"Delete trailing spaces upon leaving insert mode
+autocmd InsertLeave * s/\s\+$//e
 
 "Show tabs and trailing whitespace
 set list listchars=tab:#=,trail:·
 highlight ExtraWhitespace ctermfg=8 guifg=gray34
 match ExtraWhitespace /\s\+$\|\t/
 
-"Delete trailing spaces upon leaving insert mode
-autocmd InsertLeave * s/\s\+$//e
-
 function! TrimSpaces() range
   let oldhlsearch=&hlsearch
   :%s/\s\+$//e
   let &hlsearch=oldhlsearch
 endfunction
+
+autocmd InsertEnter * :let b:insert_start = line('.')
+autocmd InsertLeave * :call <SID>StripTrailingWhitespaces()
+
+fun! <SID>StripTrailingWhitespaces()
+    let original_cursor = getpos('.')
+    exe b:insert_start . ',.s/\s\+$//e'
+    call setpos('.', original_cursor)
+endfun
+
+"#####################################################
+" Other stuff
+
+set mouse=a
+
+set hlsearch
+
+imap jk <Esc>
+
