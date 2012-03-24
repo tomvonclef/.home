@@ -4,6 +4,7 @@
 
 set nocompatible    " let's not be like vi
 set modelines=0     " for security
+syntax enable
 
 " misc stuFF
 imap jk <Esc>
