@@ -84,7 +84,5 @@ endfun
 
 set mouse=a
 
-set hlsearch
-
 imap jk <Esc>
 
