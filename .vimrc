@@ -46,6 +46,17 @@ autocmd FileType make set noexpandtab
 filetype on
 autocmd FileType c,cpp,perl set cindent
 
+" make sure all ASP files have Win line endings
+autocmd FileType asp set ff=dos
+
+" adjust configuration for Windows {{{
+"if has("win32") || has("win16")
+"  set ff=dos
+"else
+"  set shell=/bin/bash
+"endif
+" }}}
+
 "#####################################################
 " THE FOLLOWING ARE FOR DEALING WITH WHITESPACE
 
