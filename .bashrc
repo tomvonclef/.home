@@ -31,8 +31,8 @@ fi
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
 if [ $(hostname | cut -c 1-5) == "hydra" ]; then
-    export PYTHONPATH=/home/tvonclef/lib/python:/home/tvonclef/bin/setuptools:$PYTHONPATH
-    export PATH=/home/tvonclef/bin/setuptools:$PATH
+    export PYTHONPATH=~/lib/python:~/bin/setuptools:$PYTHONPATH
+    export PATH=~/bin/setuptools:$PATH
 fi
 
 umask 077
