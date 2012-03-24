@@ -31,13 +31,11 @@ set vb
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set expandtab
 set smarttab
 
 set ruler
 set background=dark
-
-" uncomment to insert spaces instead of a tab when tab is pressed
-set expandtab
 
 " turn expandtab off for makefiles
 autocmd FileType make set noexpandtab
