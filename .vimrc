@@ -40,6 +40,7 @@ set smarttab
 set expandtab
 
 highlight FoldColumn guibg=#111111
+highlight Folded guibg=#111111
 
 " turn expandtab off for makefiles
 autocmd FileType make set noexpandtab
