@@ -1,0 +1,5 @@
+#!/bin/sh
+
+/usr/bin/xmodmap ~/.Xmodmap
+
+exec ck-launch-session gnome-session
