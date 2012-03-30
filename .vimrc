@@ -39,6 +39,13 @@ set softtabstop=4
 set smarttab
 set expandtab
 
+" automatically save and restore views for *.c files:
+au BufWinLeave *.c mkview
+au BufWinEnter *.c silent loadview
+
+highlight FoldColumn guibg=#111111
+highlight Folded guibg=#111111
+
 " turn expandtab off for makefiles
 autocmd FileType make set noexpandtab
 
