@@ -14,8 +14,10 @@ alias gd="git diff --color=auto"
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
-alias g='grep --color=auto'
+alias g='grep --color=always'
 
-alias l='less'
+alias l='less -R'
 
 alias rm="rm -I"
+
+alias pingg='ping -c 1 google.com'
