@@ -35,5 +35,10 @@ if [ $(hostname | cut -c 1-5) == "hydra" ]; then
     export PATH=~/bin/setuptools:$PATH
 fi
 
+export PATH=~/bin:$PATH
+
 umask 077
 
+if [[ $TERM = "xterm" ]]; then
+    screen
+fi
