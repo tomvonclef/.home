@@ -1,2 +1,5 @@
 [push]
 	default = simple
+[user]
+	name = Tom von Clef
+	email = tom@vonclef.com
