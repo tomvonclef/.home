@@ -21,3 +21,5 @@ alias l='less -R'
 alias rm="rm -I"
 
 alias pingg='ping -c 1 google.com'
+
+alias t="todo.sh"
