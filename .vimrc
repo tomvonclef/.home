@@ -25,8 +25,21 @@ autocmd FileType make set noexpandtab
 " make sure all ASP files have Win line endings
 autocmd FileType asp set ff=dos
 
-" show tabs and trailing whitespace
+" show tabs
 set list listchars=tab:#=,trail:·
+
+" show trailing whitespace when not in insert mode
 highlight ExtraWhitespace ctermfg=8 guifg=gray34
 match ExtraWhitespace /\s\+$\|\t/
+autocmd InsertEnter * :match none ExtraWhitespace
+autocmd InsertLeave * :match ExtraWhitespace /\s\+$\|\t/
 
+" a group of commands to strip all trailing
+" spaces whenever you exit Insert mode
+autocmd InsertEnter * :let b:insert_start = line('.')
+autocmd InsertLeave * :call <SID>StripTrailingWhitespaces()
+fun! <SID>StripTrailingWhitespaces()
+    let original_cursor = getpos('.')
+    exe b:insert_start . ',.s/\s\+$//e'
+    call setpos('.', original_cursor)
+endfun
