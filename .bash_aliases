@@ -2,9 +2,11 @@
 if [[ $OSTYPE != darwin* ]]; then
     alias ls="ls --color=auto"
     alias lll="ls -lA --color=always | less -r"
+    alias rm="rm -I"
 else
     alias ls="ls -G"
     alias lll="ls -lA | less -r"
+    alias rm="rm -i"
 fi
 
 alias ll="ls -l"
@@ -24,8 +26,6 @@ alias grep='grep --color=auto'
 alias g='grep --color=always'
 
 alias l='less -R'
-
-alias rm="rm -I"
 
 alias pingg='ping -c 1 google.com'
 
