@@ -1,8 +1,14 @@
-alias ls="ls --color=auto"
+# Macs do not accept the flag --color=auto
+if [[ $OSTYPE != darwin* ]]; then
+    alias ls="ls --color=auto"
+    alias lll="ls -lA --color=always | less -r"
+else
+    alias lll="ls -lA | less -r"
+fi
+
 alias ll="ls -l"
 alias la="ls -A"
 alias lal="ls -Al"
-alias lll="ls -lA --color=always | less -r"
 alias lsd="ll | grep ^d"
 
 alias gs="git status"
