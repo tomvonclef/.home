@@ -3,6 +3,7 @@ if [[ $OSTYPE != darwin* ]]; then
     alias ls="ls --color=auto"
     alias lll="ls -lA --color=always | less -r"
 else
+    alias ls="ls -G"
     alias lll="ls -lA | less -r"
 fi
 
