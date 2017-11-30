@@ -60,8 +60,14 @@ man() {
             man "$@"
 }
 
-## start tmux, if it exists and is not running
-if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux
+# start tmux, if it exists and is not running
+if command -v tmux>/dev/null && [[ ! $TERM =~ screen ]] && [ -z $TMUX ]; then
+
+  # tmux before v2.1 requires different settings for the mouse
+  if [[ $(echo "$(tmux -V | cut -d' ' -f2) < 2.1" | bc -l) -eq 1 ]]; then
+    tmux -f .tmux_before2.1.conf;
+  else
+    tmux;
+  fi
 fi
 
