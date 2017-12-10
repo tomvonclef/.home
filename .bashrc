@@ -41,8 +41,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# ~/bin to path
-export PATH=~/bin:$PATH
+# ~/bin and Haskell cabal and stack packages to path
+export PATH=~/bin:~/.local/bin:~/.cabal/bin:$PATH
 
 # new file permissions default
 umask 077
