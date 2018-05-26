@@ -30,7 +30,7 @@ esac
 if [ ! $starting_ssh_tvc ]; then
   starting_ssh_tvc="yes"
   export starting_ssh_tvc
-  exec ssh-agent /bin/bash
+  exec ssh-agent bash
 fi
 
 # bash aliases are in a separate file
