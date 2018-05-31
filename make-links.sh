@@ -1,5 +1,5 @@
 ln -s ~/.home/.Xmodmap ~/
-ln -s ~/.home/.bash_alias ~/
+ln -s ~/.home/.bash_aliases ~/
 ln -s ~/.home/.bash_profile ~/
 ln -s ~/.home/.bashrc ~/
 ln -s ~/.home/.gitconfig ~/
