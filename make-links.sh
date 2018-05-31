@@ -1,1 +1,13 @@
-ln -s ~/.home/.bashrc ~/.bashrc
+ln -s ~/.home/.Xmodmap ~/
+ln -s ~/.home/.bash_alias ~/
+ln -s ~/.home/.bash_profile ~/
+ln -s ~/.home/.bashrc ~/
+ln -s ~/.home/.gitconfig ~/
+ln -s ~/.home/.gvimrc ~/
+ln -s ~/.home/.inputrc ~/
+ln -s ~/.home/.screenrc ~/
+ln -s ~/.home/.tmux.conf ~/
+ln -s ~/.home/.vimrc ~/
+ln -s ~/.home/.xprofile ~/
+
+
