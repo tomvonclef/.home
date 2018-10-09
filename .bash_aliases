@@ -30,3 +30,6 @@ alias l='less -R'
 alias pingg='ping -c 1 google.com'
 
 alias t="todo.sh"
+
+alias rg="rg --color=always"
+
