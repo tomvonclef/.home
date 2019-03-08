@@ -26,6 +26,9 @@ case "$TERM" in
     xterm-color) color_prompt=yes;;
 esac
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # restart bash using ssh-agent
 if [ ! $starting_ssh_tvc ]; then
   starting_ssh_tvc="yes"
