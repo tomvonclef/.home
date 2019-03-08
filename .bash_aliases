@@ -19,6 +19,7 @@ alias ga="git add"
 alias gc="git commit -m "
 alias gp="git push"
 alias gd="git diff --color=auto"
+alias gl="git log --graph --decorate --pretty=oneline --abbrev-commit"
 
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
