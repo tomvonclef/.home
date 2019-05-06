@@ -9,5 +9,7 @@ ln -s ~/.home/.screenrc ~/
 ln -s ~/.home/.tmux.conf ~/
 ln -s ~/.home/.vimrc ~/
 ln -s ~/.home/.xprofile ~/
+ln -s ~/.home/Desktop/Remmina\ \(Not\ Scaled\).desktop ~/Desktop/
+ln -s ~/.home/Desktop/Remmina\ \(Scaled\ Up\).desktop ~/Desktop/
 
 
