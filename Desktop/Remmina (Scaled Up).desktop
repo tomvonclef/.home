@@ -4,7 +4,7 @@ Comment=
 Exec=env GDK_SCALE=2 remmina %U
 GenericName[en_US]=Remote Desktop
 GenericName=Remote Desktop
-Icon=
+Icon=org.remmina.Remmina
 MimeType=
 Name=Remmina (Scaled Up)
 Path=

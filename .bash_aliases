@@ -5,7 +5,7 @@ if [[ $OSTYPE != darwin* ]]; then
     alias rm="rm -I"
 else
     alias ls="ls -G"
-    alias lll="ls -lA | less -r"
+    alias lll="ls -lA --color | less -r"
     alias rm="rm -i"
 fi
 
