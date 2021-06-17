@@ -7,3 +7,4 @@ fi
 # revoke non-user write permissions
 mesg n
 
+. "$HOME/.cargo/env"

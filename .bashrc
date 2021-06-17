@@ -29,6 +29,8 @@ esac
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+export PROMPT_COMMAND='history -a'
+
 # restart bash using ssh-agent
 if [ ! $starting_ssh_tvc ]; then
   starting_ssh_tvc="yes"
@@ -73,4 +75,6 @@ if command -v tmux>/dev/null && [[ ! $TERM =~ screen ]] && [ -z $TMUX ]; then
     tmux;
   fi
 fi
+
+. "$HOME/.cargo/env"
 
