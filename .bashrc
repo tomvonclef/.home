@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # Format the command-prompt
-PROMPT_COMMAND='PS1="\[\033[0;33m\]\!:'\
+PROMPT_COMMAND='history -a;PS1="\[\033[0;33m\]\!:'\
 '\`if [[ \$? = "0" ]]; then echo "\\[\\033[32m\\]"; else echo "\\[\\033[31m\\]"; fi\`'\
 '\u@\h\[\033[0;33m\]:\[\033[34;1m\]\\w\[\e[0;33m\]\$\[\033[0m\] "'
 
@@ -28,8 +28,6 @@ esac
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
-
-export PROMPT_COMMAND='history -a'
 
 # restart bash using ssh-agent
 if [ ! $starting_ssh_tvc ]; then
