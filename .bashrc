@@ -76,5 +76,5 @@ if command -v tmux>/dev/null && [[ ! $TERM =~ screen ]] && [ -z $TMUX ]; then
   fi
 fi
 
-. "$HOME/.cargo/env"
+[[ -f  "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
 
