@@ -39,6 +39,8 @@ fi
 # bash aliases are in a separate file
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
+[[ -f ~/.bash_secrets ]] && . ~/.bash_secrets
+
 # enable programmable completion features
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
