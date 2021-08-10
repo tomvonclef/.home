@@ -1,3 +1,5 @@
+export HISTSIZE=10000
+
 if [ "$BASH" ]; then
   if [ -f ~/.bashrc ]; then
       . ~/.bashrc
